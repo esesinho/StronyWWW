@@ -11,17 +11,27 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <!--	skrypty	-->
+	<script>
+	document.getElementById('get_file').onclick = function() {
+    document.getElementById('my_file').click();
+	</script>
 </head>
 <body>
     <div class="navbar navbar-dark">
         <img src="pdsilogo.png" class="rounded float-right">
 
         <span>Disk Space 0mb/100mb</span>
-        <span>Username</span>
-        <a>
-            <button class="btn-success btn-primary btn-block">Log out</button>
-        </a>
-        
+
+			 <div class="dropdown" class="btn-success btn-primary btn-block">
+			  <button class="dropbtn">Username</button>
+				  <div class="dropdown-content">
+					<a href="#">----</a>
+					<a href="#">Edit My Profile</a>
+					<a href="#">LogOut</a>
+				
+				  </div>
+			</div>
+
     </div>
     <div class="container">
             <div class="row">
@@ -35,7 +45,9 @@
                                 <a href="#" class="file-control">Audio</a>
                                 <a href="#" class="file-control">Images</a>
                                 <div class="hr-line-dashed"></div>
-                                <button class="btn btn-primary btn-block">Upload Files</button>
+                                
+								<input type="file" id="myFileInput" />
+								<input type="button" class="btn btn-primary btn-block" onclick="document.getElementById('myFileInput').click()" value="Select a File" />
                                 <div class="hr-line-dashed"></div>
                                 <h5>Folders</h5>
                                 <ul class="folder-list" style="padding: 0">
